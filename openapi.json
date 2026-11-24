@@ -2,7 +2,7 @@
   "openapi": "3.0.3",
   "info": {
     "title": "TravelHub API",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Fictional travelhub demonstration. No real customer data."
   },
   "paths": {
@@ -160,6 +160,28 @@
               "application/json": {
                 "schema": {
                   "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/bookings/summary": {
+      "get": {
+        "summary": "Count records",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "total": {
+                      "type": "integer"
+                    }
+                  }
                 }
               }
             }
